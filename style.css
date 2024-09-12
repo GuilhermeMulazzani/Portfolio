@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --background-color: #f0f0f0;
+            --text-color: #333;
+            --neumorphic-light: #ffffff;
+            --neumorphic-dark: #d1d9e6;
+            --particle-color: rgba(66, 153, 225, 0.5);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%234299e1'%3E%3Ccircle cx='12' cy='12' r='6'/%3E%3C/svg%3E"), auto;
+        }
+
+        .neumorphic {
+            border-radius: 20px;
+            background: var(--background-color);
+            box-shadow: 5px 5px 10px var(--neumorphic-dark),
+                        -5px -5px 10px var(--neumorphic-light);
+            transition: all 0.3s ease;
+        }
+
+        .neumorphic-inset {
+            border-radius: 20px;
+            background: var(--background-color);
+            box-shadow: inset 8px 8px 16px var(--neumorphic-dark),
+                        inset -8px -8px 16px var(--neumorphic-light);
+        }
+
+        #hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dark-mode {
+            --background-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --neumorphic-light: #2c2c2c;
+            --neumorphic-dark: #0f0f0f; 
+            --shadow-color: #2d3748;
+            --highlight-color: #63b3ed;
+            --particle-color: rgba(99, 179, 237, 0.5);
+        }
+        .dark-mode .neumorphic {
+            box-shadow: 5px 5px 10px #131820, -5px -5px 10px #212938;
+        }
+        .neumorphic:hover {
+            box-shadow: inset 5px 5px 10px var(--shadow-color), inset -5px -5px 10px #ffffff;
+        }
+        .dark-mode .neumorphic:hover {
+            box-shadow: inset 5px 5px 10px #131820, inset -5px -5px 10px #212938;
+        }
+        .language-tag {
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 12px;
+            margin-right: 4px;
+            background-color: var(--highlight-color);
+            color: var(--bg-color);
+        }   
+
+        .project-card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transition: background-color 0.3s;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-bar {
+            height: 10px;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            transition: width 1s ease-in-out;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 50px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -4px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+        }
+
+        .testimonial-card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .testimonial-card:hover {
+            transform: scale(1.05);
+        }

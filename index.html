@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Profissional | Desenvolvedor Web</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body class="transition-colors duration-300 ease-in-out">
+    <div id="particles-js"></div>
+    <header class="fixed top-0 left-0 right-0 z-50 p-4">
+        <nav class="neumorphic p-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary-color">Meu Portfólio</a>
+            <ul class="flex space-x-6">
+                <li><a href="#sobre" class="hover:text-primary-color transition-colors">Sobre</a></li>
+                <li><a href="#projetos" class="hover:text-primary-color transition-colors">Projetos</a></li>
+                <li><a href="#habilidades" class="hover:text-primary-color transition-colors">Habilidades</a></li>
+                <li><a href="#experiencia" class="hover:text-primary-color transition-colors">Experiência</a></li>
+                <li><a href="#contato" class="hover:text-primary-color transition-colors">Contato</a></li>
+            </ul>
+            <div class="flex items-center space-x-4">
+                <a href="#" download class="neumorphic py-2 px-4 rounded-full text-primary-color hover:text-white hover:bg-primary-color transition-all duration-300">
+                    <i class="fas fa-download mr-2"></i>Baixar CV
+                </a>
+                <button id="dark-mode-toggle" class="neumorphic p-2 rounded-full">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="flex items-center justify-center">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-4">Olá, eu sou <span class="text-primary-color">Seu Nome</span></h1>
+                <p class="text-2xl mb-8">Desenvolvedor Web Full Stack</p>
+                <a href="#contato" class="neumorphic py-3 px-6 rounded-full text-primary-color hover:text-white hover:bg-primary-color transition-all duration-300">Entre em Contato</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">Sobre Mim</h2>
+                <div class="flex flex-wrap items-center">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <img src="https://picsum.photos/800/600?random=1" alt="Sua foto" class="rounded-lg shadow-lg mx-auto" style="max-width: 400px;">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <p class="text-lg mb-6">
+                            Olá! Sou um desenvolvedor web full stack apaixonado por criar soluções digitais inovadoras e eficientes. Com mais de 5 anos de experiência na indústria, especializei-me em desenvolver aplicações web robustas e escaláveis utilizando as mais recentes tecnologias.
+                        </p>
+                        <p class="text-lg mb-6">
+                            Minha abordagem combina criatividade com pensamento analítico, permitindo-me enfrentar desafios complexos e entregar resultados excepcionais. Estou sempre em busca de aprendizado e adoro colaborar em projetos desafiadores que me permitam expandir minhas habilidades.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="neumorphic py-2 px-4 rounded-full text-primary-color hover:text-white hover:bg-primary-color transition-all duration-300">
+                                <i class="fab fa-linkedin mr-2"></i>LinkedIn
+                            </a>
+                            <a href="#" class="neumorphic py-2 px-4 rounded-full text-primary-color hover:text-white hover:bg-primary-color transition-all duration-300">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">Meus Projetos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="project-card neumorphic p-6">
+                        <img src="https://picsum.photos/800/600?random=2" alt="Projeto 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">E-commerce Responsivo</h3>
+                        <p class="text-gray-600 mb-4">Desenvolvimento de uma plataforma de e-commerce totalmente responsiva com integração de pagamento.</p>
+                        <a href="#" class="text-primary-color hover:underline">Ver mais</a>
+                    </div>
+                    <div class="project-card neumorphic p-6">
+                        <img src="https://picsum.photos/800/600?random=3" alt="Projeto 2" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Aplicativo de Gestão de Tarefas</h3>
+                        <p class="text-gray-600 mb-4">Criação de um aplicativo web para gerenciamento de tarefas com funcionalidades avançadas.</p>
+                        <a href="#" class="text-primary-color hover:underline">Ver mais</a>
+                    </div>
+                    <div class="project-card neumorphic p-6">
+                        <img src="https://picsum.photos/800/600?random=4" alt="Projeto 3" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Dashboard Analítico</h3>
+                        <p class="text-gray-600 mb-4">Desenvolvimento de um dashboard interativo para visualização de dados em tempo real.</p>
+                        <a href="#" class="text-primary-color hover:underline">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">Minhas Habilidades</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="neumorphic p-6">
+                        <h3 class="text-2xl font-semibold mb-4">Desenvolvimento Front-end</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-base font-medium">HTML/CSS</span>
+                                    <span class="text-sm font-medium">95%</span>
+                                </div>
+                                <div class="neumorphic-inset w-full h-2.5 bg-gray-200 rounded-full">
+                                    <div class="skill-bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-base font-medium">JavaScript</span>
+                                    <span class="text-sm font-medium">90%</span>
+                                </div>
+                                <div class="neumorphic-inset w-full h-2.5 bg-gray-200 rounded-full">
+                                    <div class="skill-bar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-base font-medium">React</span>
+                                    <span class="text-sm font-medium">85%</span>
+                                </div>
+                                <div class="neumorphic-inset w-full h-2.5 bg-gray-200 rounded-full">
+                                    <div class="skill-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="neumorphic p-6">
+                        <h3 class="text-2xl font-semibold mb-4">Desenvolvimento Back-end</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-base font-medium">Node.js</span>
+                                    <span class="text-sm font-medium">88%</span>
+                                </div>
+                                <div class="neumorphic-inset w-full h-2.5 bg-gray-200 rounded-full">
+                                    <div class="skill-bar" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-base font-medium">Python</span>
+                                    <span class="text-sm font-medium">80%</span>
+                                </div>
+                                <div class="neumorphic-inset w-full h-2.5 bg-gray-200 rounded-full">
+                                    <div class="skill-bar" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-base font-medium">SQL</span>
+                                    <span class="text-sm font-medium">92%</span>
+                                </div>
+                                <div class="neumorphic-inset w-full h-2.5 bg-gray-200 rounded-full">
+                                    <div class="skill-bar" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">Experiência Profissional</h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="timeline-item">
+                        <h3 class="text-2xl font-semibold mb-2">Desenvolvedor Full Stack Sênior</h3>
+                        <p class="text-gray-600 mb-2">TechInnovate Solutions | 2020 - Presente</p>
+                        <p>Liderança no desenvolvimento de aplicações web de grande escala, implementação de arquiteturas escaláveis e mentoria de desenvolvedores juniores.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3 class="text-2xl font-semibold mb-2">Desenvolvedor Front-end</h3>
+                        <p class="text-gray-600 mb-2">WebCraft Agency | 2018 - 2020</p>
+                        <p>Criação de interfaces de usuário responsivas e acessíveis para diversos clientes, utilizando React e Vue.js.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3 class="text-2xl font-semibold mb-2">Desenvolvedor Web Júnior</h3>
+                        <p class="text-gray-600 mb-2">StartUp Innovations | 2016 - 2018</p>
+                        <p>Desenvolvimento de landing pages e manutenção de sites existentes, trabalhando com HTML, CSS e JavaScript.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">Depoimentos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="testimonial-card neumorphic p-6">
+                        <p class="mb-4">"Um profissional excepcional! Sua habilidade técnica e criatividade trouxeram uma nova dimensão ao nosso projeto."</p>
+                        <div class="flex items-center">
+                            <img src="https://picsum.photos/100/100?random=5" alt="Cliente 1" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold">Maria Silva</h4>
+                                <p class="text-sm text-gray-600">CEO, TechStart</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card neumorphic p-6">
+                        <p class="mb-4">"Sua capacidade de resolver problemas complexos e entregar soluções elegantes é impressionante. Recomendo fortemente!"</p>
+                        <div class="flex items-center">
+                            <img src="https://picsum.photos/100/100?random=6" alt="Cliente 2" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold">João Santos</h4>
+                                <p class="text-sm text-gray-600">CTO, InnovateTech</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card neumorphic p-6">
+                        <p class="mb-4">"Um desenvolvedor dedicado e talentoso. Sua atenção aos detalhes e compromisso com a qualidade são admiráveis."</p>
+                        <div class="flex items-center">
+                            <img src="https://picsum.photos/100/100?random=7" alt="Cliente 3" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold">Ana Oliveira</h4>
+                                <p class="text-sm text-gray-600">Gerente de Projetos, WebSolutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">Blog</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="neumorphic p-6">
+                        <img src="https://picsum.photos/800/600?random=8" alt="Post 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">O Futuro do Desenvolvimento Web</h3>
+                        <p class="text-gray-600 mb-4">Uma análise das tendências emergentes que moldarão o futuro do desenvolvimento web.</p>
+                        <a href="#" class="text-primary-color hover:underline">Ler mais</a>
+                    </div>
+                    <div class="neumorphic p-6">
+                        <img src="https://picsum.photos/800/600?random=9" alt="Post 2" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Otimizando Performance em React</h3>
+                        <p class="text-gray-600 mb-4">Dicas e técnicas para melhorar o desempenho de suas aplicações React.</p>
+                        <a href="#" class="text-primary-color hover:underline">Ler mais</a>
+                    </div>
+                    <div class="neumorphic p-6">
+                        <img src="https://picsum.photos/800/600?random=10" alt="Post 3" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Introdução ao GraphQL</h3>
+                        <p class="text-gray-600 mb-4">Um guia prático para começar a usar GraphQL em seus projetos.</p>
+                        <a href="#" class="text-primary-color hover:underline">Ler mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center">Entre em Contato</h2>
+                <div class="max-w-3xl mx-auto neumorphic p-8">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 font-medium">Nome</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg neumorphic-inset focus:outline-none focus:ring-2 focus:ring-primary-color">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 font-medium">E-mail</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg neumorphic-inset focus:outline-none focus:ring-2 focus:ring-primary-color">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 font-medium">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 rounded-lg neumorphic-inset focus:outline-none focus:ring-2 focus:ring-primary-color"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 px-6 rounded-full bg-primary-color text-white hover:bg-opacity-90 transition-all duration-300">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="neumorphic mt-16 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between items-center">
+                <div class="w-full md:w-1/3 text-center md:text-left mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">Seu Nome</h3>
+                    <p>Desenvolvedor Web Full Stack</p>
+                </div>
+                <div class="w-full md:w-1/3 text-center mb-6 md:mb-0">
+                    <ul class="flex justify-center space-x-4">
+                        <li><a href="#" class="text-primary-color hover:text-opacity-80"><i class="fab fa-linkedin fa-2x"></i></a></li>
+                        <li><a href="#" class="text-primary-color hover:text-opacity-80"><i class="fab fa-github fa-2x"></i></a></li>
+                        <li><a href="#" class="text-primary-color hover:text-opacity-80"><i class="fab fa-twitter fa-2x"></i></a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/3 text-center md:text-right">
+                    <p>&copy; 2023 Seu Nome. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
